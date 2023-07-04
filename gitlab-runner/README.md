@@ -1,0 +1,1 @@
+aws cloudformation create-stack --stack-name gitlab-shared-runners  --template-body file://shared-runner.yaml  --capabilities CAPABILITY_NAMED_IAM  --region us-east-1 --debug --profile=temzy
