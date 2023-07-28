@@ -1,0 +1,21 @@
+fullnameOverride: test-chart
+image:
+    repository: 326355388919.dkr.ecr.eu-west-3.amazonaws.com/test-chart:1234567890
+namespace: default
+containerPort: 3001
+autoscaling:
+    enabled: true
+ingress:
+    host: test-chart
+env:
+    enabled: true
+envFrom: 
+- secretRef:
+    name: java-opts
+JavaOpts:
+    enabled: true
+lProbe:
+    enabled: false
+rProbe:
+    enabled: false
+
